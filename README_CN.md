@@ -39,18 +39,20 @@
 
 | Examples           | Model_name   | input_shapes     | Dtype | S905X5 | A311D2 |
 | ------------------ | ------------ | ---------------- | ----- | ------ | ------ |
-| mobilenet          | mobilenet_v2 | [1, 3, 224, 224] | INT8  |        |        |
-| resnet             | resnet50-v2  |                  |       |        |        |
-| yolov8             | yolov8m      |                  |       |        |        |
-| yolov11            |              |                  |       |        |        |
-| yoloworld          | yoloworld    |                  |       |        |        |
+| mobilenet          | mobilenet_v2 | [1, 3, 224, 224] | INT8  |1047.54 | 798.94 |
+| resnet             | resnet50-v2  | [1, 3, 224, 224] | INT8  | 106.78 | 128.91 |
+| yolov8             | yolov8l      | [1, 3, 640, 640] | INT8  | 11.55  | 11.12  |
+| yolov11            | yolov11n     | [1, 3, 640, 640] | INT8  | 41.14  | 41.48  |
+| yoloworld          | yoloworld    | [1, 3, 480, 640] | INT8  | 19.38  | 19.04  |
 | yoloe              | yoloe        |                  |       |        |        |
-| retinaface         | retinaface   |                  |       |        |        |
+| retinaface         | retinaface   | [1, 3, 320, 320] | INT8  | 341.99 | 305.89 |
 | ppocr-det          |              |                  |       |        |        |
 | blazepose_detect   |              |                  |       |        |        |
 | blazepose_landmark |              |                  |       |        |        |
 | ECAPA-TDNN         |              |                  |       |        |        |
-| Whisper            | Whisper      |                  |       |        |        |
+| Whisper            | encoder_tiny_en |  [1, 80, 3000]     | Hybrid  |  0.71 |  0.58  |
+| Whisper            | decoder_tiny_en |  [1, 1500, 384]&[1, 48]   | Hybrid  |  10.35  |  9.22  |
+| Clip               | clip-vit-base-patch32 |  [1, 3, 224, 224]   | Hybrid  |  7.48  |  6.82  |
 
 
 
