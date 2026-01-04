@@ -25,7 +25,9 @@
 extern "C" {
 #endif
 
-/////////////////////////some value define////////////////////////
+/*=============================================================
+                    Macro Definitions
+==============================================================*/
 #define AML_NN_SDK_VERSION          "2.8.5"
 
 #define MAX_NAME_LENGTH             64
@@ -62,7 +64,7 @@ typedef enum _amlnn_model_ {
 } amlnn_model_type;
 
 /*=================================================================================
-load nbg type
+load adla type
 ==================================================================================*/
 typedef enum _amlnn_nbg_type_ {
     NN_NBG_FILE               = 0,
@@ -1020,17 +1022,17 @@ int aml_util_flushTensorHandle(void *context, aml_flush_type_t type);
 
 /**
  * @brief Get model input tensor information list
- * @param nbgdata    Pointer to nbg data
+ * @param adladata   Pointer to adla data
  * @return tensor_info* Pointer to tensor info structure
  */
-tensor_info* aml_util_getInputTensorInfo(const char* nbgdata);
+tensor_info* aml_util_getInputTensorInfo(const char* adladata);
 
 /**
  * @brief Get model output tensor information list
- * @param nbgdata    Pointer to nbg data
+ * @param adladata   Pointer to adla data
  * @return tensor_info* Pointer to tensor info structure
  */
-tensor_info* aml_util_getOutputTensorInfo(const char* nbgdata);
+tensor_info* aml_util_getOutputTensorInfo(const char* adladata);
 
 /**
  * @brief Malloc buffer
